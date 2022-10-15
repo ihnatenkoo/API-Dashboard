@@ -16,10 +16,10 @@ export class UserController extends BaseController implements IUserController {
 		]);
 	}
 
-	register(req: Request, res: Response, next: NextFunction) {
+	register(req: Request, res: Response, next: NextFunction): void {
 		this.ok(res, 'register');
 	}
-	login(req: Request, res: Response, next: NextFunction) {
+	login(req: Request, res: Response, next: NextFunction): void {
 		this.ok(res, 'login');
 	}
 }
