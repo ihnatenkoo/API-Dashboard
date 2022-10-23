@@ -14,7 +14,7 @@ import { ValidateMiddleware } from '../common/validate.middleware';
 @injectable()
 export class UserController extends BaseController implements IUserController {
 	constructor(
-		@inject(TYPES.ILogger) private loggerService: ILogger,
+		@inject(TYPES.Logger) private loggerService: ILogger,
 		@inject(TYPES.UserService) private userService: UserService,
 	) {
 		super(loggerService);
