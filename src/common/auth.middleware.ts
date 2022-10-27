@@ -13,14 +13,13 @@ export class AuthMiddleware implements IMiddleware {
 					next();
 				} else if (payload) {
 					if (typeof payload != 'string') {
-						console.log('1');
 						req.user = payload.email;
 						next();
 					}
 				}
 			});
+		} else {
+			next();
 		}
-
-		next();
 	}
 }
